@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LOGIN", "LOGIN\LOGIN.csproj", "{213853C0-2C91-4F71-8A1C-0D5DBB5F21EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{213853C0-2C91-4F71-8A1C-0D5DBB5F21EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{213853C0-2C91-4F71-8A1C-0D5DBB5F21EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{213853C0-2C91-4F71-8A1C-0D5DBB5F21EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{213853C0-2C91-4F71-8A1C-0D5DBB5F21EA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
