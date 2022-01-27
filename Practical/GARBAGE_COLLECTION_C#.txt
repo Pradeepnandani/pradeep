@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Array
+{
+    class garbage_collection
+    {
+        public static void Main(string[] args)
+        {
+            try
+            {
+                Console.WriteLine("GC Maximum Generations:" + GC.MaxGeneration);
+                
+            Console.WriteLine("Total Memory:" + GC.GetTotalMemory(false));
+            garbage_collection oBaseGC = new garbage_collection();
+            Console.WriteLine("BaseGC Generation is :" + GC.GetGeneration(oBaseGC));
+            Console.WriteLine("Total Memory:" + GC.GetTotalMemory(false));
+            }
+            catch (Exception oEx)
+            {
+
+                //LESSON-1 .NET Framework with C#
+                Console.WriteLine("Error:" + oEx.Message);
+            }
+            Console.ReadLine();
+        }
+    }
+}
+
+
+
