@@ -1,0 +1,64 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Array
+{
+    struct movie
+    {
+        public string name;
+        public string actor;
+        public string actoress;
+        public double profit;
+
+
+        public void display()
+        {
+            Console.WriteLine(name);
+            Console.WriteLine(actor);
+            Console.WriteLine(actoress);
+            Console.WriteLine(profit);
+
+
+        }
+        // method overiddimg
+        public void display(int i)
+        {
+
+            Console.WriteLine(name);
+            Console.WriteLine(actor);
+            Console.WriteLine(actoress);
+            Console.WriteLine(profit);
+        }
+
+        public movie(string nm)
+        {
+              name=nm;
+            actor= "john";
+            actoress="karina";
+            profit=4000;
+        
+        }
+        public static void Main(string[] args)
+        {
+        movie m1 = new movie("dhoom");
+            m1.display();
+            movie m2 = new movie();
+            m2.name = "dhoom2";
+            m2.actor = "abhishek bachhan";
+            m2.actoress = "aishwarya";
+            m2.profit = 14567;
+            m2.display();
+            Console.ReadLine();
+        
+        
+        
+        
+        }
+
+
+
+    }
+}
