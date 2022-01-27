@@ -1,0 +1,48 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Array
+{
+    class optional_parameter
+    {
+        public static void Main()
+        {
+
+            add(24,23,26);
+            add(14, 15);
+            sub(1,5);
+            sub(12,3,4);
+            mul(12,14,45);
+            Console.ReadLine();
+            
+
+        }
+        static void add(int a , int b,int c=15)
+        {
+        Console.WriteLine(a+b+c);
+        
+        
+        }
+        
+        static void sub(int a, int b, int c=3)
+        {
+
+            Console.WriteLine(c*b*c);
+        
+        }
+        static void mul(int a , int b, int c = 23)
+        {
+
+            Console.WriteLine(a * b * c);
+
+        }
+
+
+
+        
+
+}  
+}
