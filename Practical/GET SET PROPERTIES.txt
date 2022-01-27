@@ -1,0 +1,67 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Array
+{
+    class property
+    {
+        string emp_name;
+        int emp_id=202;
+      public  string Designation;
+
+        public int Emp_id
+        {
+            get { return emp_id; }
+            set { emp_id = value; }
+        
+        }
+        public string  Emp_name
+        {
+            get{return emp_name;}
+            set{emp_name=value;}
+        
+        }
+
+        public property(string name, string profile)
+        {
+            Emp_name = name;
+            Designation = profile;
+            this.Emp_id=405;
+        }
+        public void display()
+        {
+            Console.WriteLine("employee name is : " + Emp_name);
+            Console.WriteLine("employee id is : " + Emp_id);
+            Console.WriteLine("employee Designation is : " + Designation);
+        
+        
+        }
+
+        
+    }
+    class miraj
+    {
+        static void Main(string[] args)
+        {
+            property p = new property("Sandeepp","VP");
+       //     p.Emp_id = 405;
+            p.display();
+
+            property p2 = new property("Pradeep", "Manager");
+            //     p.Emp_id = 405;
+            p2.display();
+
+            
+           
+            Console.ReadLine();
+        
+        }
+       
+        
+    
+    
+    }
+}
