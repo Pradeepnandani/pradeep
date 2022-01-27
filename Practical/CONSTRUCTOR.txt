@@ -1,0 +1,57 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Array
+{ 
+    struct books
+    {
+        
+        int id;
+        string book_name;
+        string author;
+        double price;
+        
+        public void book_info()
+        {
+            Console.WriteLine( "book id : "+id);
+            Console.WriteLine("book name : " +book_name);
+            Console.WriteLine("Author name : "+author);
+            Console.WriteLine("book price : " +price);
+        }
+    
+        public books( int book_id,string nm , string auth , double amount )
+        {
+            id = book_id;
+             book_name=nm;
+            author= auth;
+            price = amount;
+        }
+
+        public static void Main(string[] args)
+        {
+            books b1 = new books(111,"English", "c.b.kore",400);
+            books b2 = new books(112,"marathi", "d.m.patil",500);
+            books b3 = new books(113,"hindi", "r.m.koli",250);
+            books b4 = new books(114,"maths", "p.d.nandani",300);
+            books b5 = new books(115,"geography", "k.p.mali",600);
+            b1.book_info();
+            b2.book_info();
+            b3.book_info();
+            b4.book_info();
+            b5.book_info();
+
+            double totalamount= b1.price + b2.price + b3.price + b4.price + b5.price;
+
+            Console.WriteLine("total amount of books is  : " + totalamount );
+            
+            Console.ReadLine();
+            
+        
+        
+        }
+
+    }
+}
