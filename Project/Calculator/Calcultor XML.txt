@@ -1,0 +1,32 @@
+<Window x:Class="CALCULATOR.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid Margin="0,0,-6.6,1.8">
+        <Grid.Background>
+            <ImageBrush ImageSource="E:\Anudip Foundation\c#\CALCULATOR\CALCULATOR\photos\view-office-table-desk-workspace-260nw-1343286527.jpg" Stretch="UniformToFill">
+                <ImageBrush.RelativeTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </ImageBrush.RelativeTransform>
+            </ImageBrush>
+        </Grid.Background>
+        <Label Content="RESULT" HorizontalAlignment="Left" Margin="10,136,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
+        <Label Content="FIRST NUMBER" HorizontalAlignment="Left" Margin="10,51,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.441,0.558" Width="145" FontWeight="Bold" FontSize="18"/>
+        <Label Content="SECOND NUMBER" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top" Height="33" Width="170" FontWeight="Bold" FontSize="18"/>
+        <TextBox x:Name="TXT_FIRSTNO" HorizontalAlignment="Left" Height="27" Margin="185,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="128" FontSize="18" BorderBrush="#FF090705" Background="#FFEEE5E5"/>
+        <TextBox x:Name="TXT_SECONDNO" HorizontalAlignment="Left" Height="27" Margin="185,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="128" FontSize="18" BorderBrush="#FF04060C" Background="#FFFAE4E4"/>
+        <TextBox x:Name="TXT_RESULT" HorizontalAlignment="Left" Height="27" Margin="185,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="128" FontSize="18" BorderBrush="#FF050609" Background="#FFF5E2E2"/>
+        <Button x:Name="BTN_ADD" Content="ADD" HorizontalAlignment="Left" Margin="10,197,0,0" VerticalAlignment="Top" Width="100" Height="52" FontSize="18" FontWeight="Bold" Background="#FF3CE1B8" BorderBrush="#FF120E0A" Foreground="#FF020A06" Click="BTN_ADD_Click"/>
+        <Button x:Name="BTN_SUB" Content="SUBSTRACT" HorizontalAlignment="Left" Margin="136,197,0,0" VerticalAlignment="Top" Width="110" RenderTransformOrigin="0.448,-1.058" Height="52" FontWeight="Bold" FontSize="18" Background="#FF3CE1B8" Click="BTN_SUB_Click"/>
+        <Button x:Name="BTN_MUL" Content="MULTIPLY" HorizontalAlignment="Left" Margin="272,197,0,0" VerticalAlignment="Top" Width="110" FontWeight="Bold" FontSize="18" Height="52" Background="#FF3CE1B8" Click="BTN_MUL_Click"/>
+        <Button x:Name="BTN_DIV" Content="DIVIDE" HorizontalAlignment="Left" Margin="405,197,0,0" VerticalAlignment="Top" Width="110" Height="52" FontWeight="Bold" FontSize="18" Background="#FF3CE1B8" Click="BTN_DIV_Click"/>
+        <Label Content="CALCULATOR" HorizontalAlignment="Left" Margin="43,-6,0,0" VerticalAlignment="Top" Width="302" FontWeight="Bold" FontSize="36" Foreground="#FFE85211"/>
+        <Button Content="CLEAR" HorizontalAlignment="Left" Margin="225,264,0,0" VerticalAlignment="Top" Width="75" Height="45" FontWeight="Bold" FontSize="18" Background="#FFE6F8E2" Click="Button_Click_1"/>
+
+    </Grid>
+</Window>
