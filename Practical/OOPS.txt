@@ -1,0 +1,107 @@
+using System;
+
+
+namespace Array
+{
+    class nandani1
+    {
+        string vehicle_name;
+        string vehicle_model;
+        double vehicle_price;
+        string vehicle_avg;
+
+        public string Vehicle_name
+        {
+            get { return vehicle_name; }
+            set { vehicle_name = value; }
+        }
+        public string Vehicle_model
+        {
+            get { return vehicle_model; }
+            set { vehicle_model = value; }
+        }
+
+        public double Vehicle_price
+        {
+            get { return vehicle_price; }
+            set { vehicle_price = value; }
+        }
+
+        public string Vehicle_avg
+        {
+            get { return vehicle_avg; }
+            set { vehicle_avg = value; }
+        }
+        public nandani1()
+        {
+            Vehicle_name = "Lambhorgini";
+            Vehicle_model = "2015";
+            Vehicle_price = 4000000;
+            Vehicle_avg = "25km per liture";
+        
+        }
+
+        public void car_info()
+        {
+            Console.WriteLine("vehicle name is : " + Vehicle_name);
+            Console.WriteLine("vehicle Mdel is : " + Vehicle_model);
+            Console.WriteLine("vehicle price is : " + Vehicle_price);
+            Console.WriteLine("vehicle average is : " + Vehicle_avg); 
+        }
+    }
+
+    class nandani:nandani1
+    {
+        string name;
+        string model;
+        double price;
+        string avg;
+
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+        public string Model
+        {
+            get { return model; }
+            set { model = value; }
+        }
+        public double Price
+        {
+            get { return price; }
+            set { price = value; }
+        }
+        public string Avg
+        {
+            get { return avg; }
+            set { avg = value; }
+        } 
+        public nandani(string b_Name, string b_Model, double b_Price, string b_Avg) 
+        {
+            Name = b_Name;
+            Model = b_Model;
+            Price = b_Price;
+            Avg = b_Avg;
+        
+        }
+        public void bike_display()
+        {
+            Console.WriteLine("bike name is : " + Name);
+            Console.WriteLine("bike Mdel is : " + Model);
+            Console.WriteLine("bike price is : " + Price);
+            Console.WriteLine("bike average is : " + Avg);
+        }
+    }
+
+    class main2
+    {
+        public static void Main(string[] args)
+        {
+            nandani p = new nandani("HERO","2004",45000,"60km/hr");
+            p.car_info();
+            p.bike_display();
+            Console.ReadLine();
+        }   
+    }   
+}
