@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Text.RegularExpressions;
+
+namespace Array
+{
+    class REGEX
+    {
+       static void Main(string [] args)
+        {
+            Regex r = new Regex(@"^+\(+91)\-?\d{10}");
+
+            string[] array = new string[5] { "96573968047","+965739680472","+91-9657396807","123456789125245","123456"};
+
+            foreach (string item in array)
+            {
+                Console.WriteLine("{0}{1} valid number",item,
+                r.IsMatch(item) ? "is":"is not");
+            }
+            Console.ReadLine();
+        }
+
+    }
+}
