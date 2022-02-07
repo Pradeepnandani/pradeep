@@ -1,0 +1,122 @@
+@model IEnumerable<MVC_Project.Models.Student>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<div id="Div">
+    <div class="alert alert-success" role="alert">
+        @TempData["insert"]
+
+    </div>
+    <div class="alert alert-success" role="alert">
+        @TempData["Update"]
+    </div>
+    <div class="alert alert-success" role="alert">
+        @TempData["Delete"]
+    </div>
+    </div>
+
+
+
+    <p>
+        @Html.ActionLink("Add Student", "Create")
+    </p>
+    <table class="table table-bordered  table-hover table-striped table-responsive" style="overflow-x: auto; text-align:center" id="table" onload="load()">
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.full_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mother_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.date_of_birth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.student_mobile_no)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.parent_mobile_no)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.School_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pancard_number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Branch)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                Edit
+            </th>
+            <th>
+                Delete
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.full_name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Mother_name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Gender)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.date_of_birth)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.student_mobile_no)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.parent_mobile_no)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.School_name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.pancard_number)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Branch)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td style="text-align:center">
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Student_id })
+                </td>
+                <td>
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Student_id })
+                </td>
+            </tr>
+        }
+
+
+
+    </table>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            debugger;
+        });
+
+    </script>
+
+
+

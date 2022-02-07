@@ -1,0 +1,134 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using MVC_Project.Models;
+
+namespace MVC_Project.Controllers
+{
+    public class HomeController : Controller
+    {
+      
+        public ActionResult Index()
+        {
+            StudentDBContext studentDBContext = new StudentDBContext(); 
+            List<Student> obj =studentDBContext.GetStudents();
+            return View(obj);
+        }
+
+        public ActionResult Create()
+        {
+            return View();
+
+        }
+        [HttpPost]
+        public ActionResult Create(Student std)
+        {
+            try
+            {
+                if (ModelState.IsValid == true)
+                {
+                    StudentDBContext studentDBContext = new StudentDBContext();
+                    bool check = studentDBContext.insertdata(std);
+                    if (check == true)
+                    {
+                        TempData["insert"] = "Data hasbeen inserted sucessfully";
+                        ModelState.Clear();
+                        return RedirectToAction("Index");
+
+                    }
+                }
+                return View();
+
+
+            }
+
+            catch
+            {
+
+                return View("Error");
+            }
+
+
+        }
+
+        [HttpGet]
+        public ActionResult Edit(int id)
+        {
+            StudentDBContext studentDBContext = new StudentDBContext();
+           var row = studentDBContext.GetStudents().Find(Model => Model.Student_id == id);
+
+            return View(row);
+
+        }
+        [HttpPost]
+        public ActionResult Edit( int id , Student std)
+        {
+
+
+            try
+            {
+                if (ModelState.IsValid == true)
+                {
+                    StudentDBContext studentDBContext = new StudentDBContext();
+                    bool check = studentDBContext.UpdateStudent(std);
+                    if (check == true)
+                    {
+                        TempData["update"] = "Data has been Updated sucessfully";
+                        ModelState.Clear();
+                        return RedirectToAction("Index");
+
+                    }
+                }
+                return View();
+
+
+            }
+
+            catch
+            {
+
+                return View("Error");
+            }
+
+        }
+       [HttpGet]
+        public ActionResult Delete(int id)
+        {
+            StudentDBContext studentDBContext = new StudentDBContext();
+            var row = studentDBContext.GetStudents().Find(Model => Model.Student_id == id);
+
+            return View(row);
+
+        }
+        [HttpPost]
+        public ActionResult Delete(int id ,Student std)
+        {
+            try
+            {
+              
+                {
+                    StudentDBContext studentDBContext = new StudentDBContext();
+                    bool check = studentDBContext.DeleteStudent(id);
+                    if (check == true)
+                    {
+                        TempData["Delete"] = "Data has been Deleted sucessfully";
+                        ModelState.Clear();
+                        return RedirectToAction("Index");
+
+                    }
+                }
+                return View();
+
+
+            }
+
+            catch
+            {
+
+                return View("Error");
+            }
+        }
+    }
+}
